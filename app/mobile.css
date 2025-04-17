@@ -1,0 +1,55 @@
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  /* Improve touch targets */
+  button,
+  a,
+  input[type="checkbox"],
+  .select-trigger {
+    min-height: 44px;
+  }
+
+  /* Fix for iOS input zoom */
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* Prevent horizontal overflow */
+  .container {
+    overflow-x: hidden;
+  }
+
+  /* Improve table scrolling on mobile */
+  .table-container {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fix for iOS momentum scrolling */
+  .overflow-auto,
+  .overflow-y-auto,
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Add utility class for extra small screens */
+@media (min-width: 400px) {
+  .xs\:hidden {
+    display: none;
+  }
+
+  .xs\:inline {
+    display: inline;
+  }
+}
+
+/* Fix for iOS Safari bottom bar */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
